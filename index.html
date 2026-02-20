@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thiệp Cưới | Minh & Linh</title>
+  <meta name="description" content="Thiệp cưới online của Minh & Linh. Trân trọng kính mời!" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Thiệp Cưới | Minh & Linh" />
+  <meta property="og:description" content="Trân trọng kính mời bạn đến chung vui trong ngày trọng đại của chúng mình." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <!-- Ambient background -->
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb o1"></span>
+    <span class="orb o2"></span>
+    <span class="orb o3"></span>
+  </div>
+
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#home" aria-label="Về đầu trang">
+        <span class="brand-dot"></span>
+        <span>Minh <em>&</em> Linh</span>
+      </a>
+
+      <nav class="nav" aria-label="Điều hướng">
+        <a href="#story">Câu chuyện</a>
+        <a href="#event">Lễ cưới</a>
+        <a href="#gallery">Ảnh</a>
+        <a href="#rsvp">RSVP</a>
+      </nav>
+
+      <button class="icon-btn" id="musicBtn" aria-label="Bật tắt nhạc" title="Nhạc nền">
+        <span class="icon">♪</span>
+      </button>
+
+      <button class="icon-btn mobile-menu" id="menuBtn" aria-label="Mở menu" title="Menu">
+        <span class="icon">≡</span>
+      </button>
+    </div>
+
+    <div class="mobile-drawer" id="drawer" aria-hidden="true">
+      <a href="#story">Câu chuyện</a>
+      <a href="#event">Lễ cưới</a>
+      <a href="#gallery">Ảnh</a>
+      <a href="#rsvp">RSVP</a>
+    </div>
+  </header>
+
+  <!-- Audio -->
+  <audio id="bgm" loop preload="auto" autoplay muted playsinline>
+    <source src="./assets/music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Hero -->
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="pill">Wedding Invitation</p>
+          <h1 class="title">
+            Minh <span class="amp">&</span> Linh
+          </h1>
+          <p class="subtitle">
+            Trân trọng kính mời bạn đến chung vui cùng chúng mình trong ngày trọng đại.
+          </p>
+
+          <div class="meta">
+            <div class="meta-card">
+              <div class="meta-label">Ngày</div>
+              <div class="meta-value" id="dateText">08.06.2026</div>
+            </div>
+            <div class="meta-card">
+              <div class="meta-label">Địa điểm</div>
+              <div class="meta-value">Trung tâm Tiệc cưới Ánh Dương</div>
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn primary" href="#rsvp">Xác nhận tham dự</a>
+            <a class="btn ghost" href="#event">Xem thông tin lễ cưới</a>
+          </div>
+
+          <div class="countdown" aria-label="Đếm ngược">
+            <div class="cd-box"><span id="dd">--</span><small>Ngày</small></div>
+            <div class="cd-box"><span id="hh">--</span><small>Giờ</small></div>
+            <div class="cd-box"><span id="mm">--</span><small>Phút</small></div>
+            <div class="cd-box"><span id="ss">--</span><small>Giây</small></div>
+          </div>
+
+          <p class="hint">Kéo xuống để xem thêm ↓</p>
+        </div>
+
+        <div class="hero-card reveal" data-delay="120">
+          <div class="hero-image" role="img" aria-label="Ảnh cưới"
+               style="background-image:url('./assets/hero.jpg')"></div>
+          <div class="hero-card-foot">
+            <div>
+              <div class="small-label">Save the date</div>
+              <div class="small-value">08 Jun 2026</div>
+            </div>
+            <a class="chip" href="#gallery">Xem album</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section id="story" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="h2">Câu chuyện của chúng mình</h2>
+          <p class="lead">
+            Một hành trình giản dị, đủ lâu để hiểu nhau — và đủ đúng lúc để cùng về chung một nhà.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="t-card reveal">
+            <div class="t-dot"></div>
+            <h3>Lần đầu gặp</h3>
+            <p>Gặp nhau trong một buổi chiều rất bình thường — nhưng từ đó mọi thứ không còn bình thường nữa.</p>
+            <span class="t-time">2019</span>
+          </article>
+
+          <article class="t-card reveal" data-delay="80">
+            <div class="t-dot"></div>
+            <h3>Hẹn hò</h3>
+            <p>Chúng mình học cách lắng nghe, kiên nhẫn và cùng nhau trưởng thành qua những điều nhỏ nhất.</p>
+            <span class="t-time">2020</span>
+          </article>
+
+          <article class="t-card reveal" data-delay="120">
+            <div class="t-dot"></div>
+            <h3>Cầu hôn</h3>
+            <p>Một lời hứa đơn giản: “Mình cùng nhau làm nhà nhé.”</p>
+            <span class="t-time">2025</span>
+          </article>
+
+          <article class="t-card reveal" data-delay="160">
+            <div class="t-dot"></div>
+            <h3>Ngày cưới</h3>
+            <p>Và chúng mình rất muốn có bạn ở đó — chứng kiến khoảnh khắc quan trọng này.</p>
+            <span class="t-time">2026</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event -->
+    <section id="event" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="h2">Thông tin lễ cưới</h2>
+          <p class="lead">Thời gian & địa điểm (bạn thay bằng thông tin thật).</p>
+        </div>
+
+        <div class="cards-3">
+          <article class="info-card reveal">
+            <h3>Lễ ăn hỏi</h3>
+            <p><b>09:00</b> — 07.06.2026</p>
+            <p>Nhà gái: 12 Nguyễn Trãi, Q.1</p>
+            <a class="link" target="_blank" rel="noopener"
+               href="https://maps.google.com/?q=Nguyen+Trai+Q1">Mở Google Maps</a>
+          </article>
+
+          <article class="info-card reveal" data-delay="80">
+            <h3>Lễ thành hôn</h3>
+            <p><b>10:30</b> — 08.06.2026</p>
+            <p>Nhà trai: 88 Lê Lợi, Q.1</p>
+            <a class="link" target="_blank" rel="noopener"
+               href="https://maps.google.com/?q=Le+Loi+Q1">Mở Google Maps</a>
+          </article>
+
+          <article class="info-card reveal" data-delay="120">
+            <h3>Tiệc cưới</h3>
+            <p><b>18:00</b> — 08.06.2026</p>
+            <p>Trung tâm Tiệc cưới Ánh Dương</p>
+            <a class="link" target="_blank" rel="noopener"
+               href="https://maps.google.com/?q=Wedding+Center">Mở Google Maps</a>
+          </article>
+        </div>
+
+        <div class="note reveal" data-delay="160">
+          <div class="note-ic">✦</div>
+          <div>
+            <b>Dress code:</b> Pastel / Trắng / Navy (tuỳ bạn chỉnh)
+            <div class="muted">Có thể thêm QR mừng cưới ở phần cuối nếu bạn muốn.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="h2">Album ảnh</h2>
+          <p class="lead">Bấm vào ảnh để phóng to.</p>
+        </div>
+
+        <div class="gallery">
+          <button class="g-item reveal" data-src="./assets/gallery-1.jpg" aria-label="Mở ảnh 1">
+            <img src="./assets/gallery-1.jpg" alt="Ảnh cưới 1" loading="lazy">
+          </button>
+          <button class="g-item reveal" data-delay="60" data-src="./assets/gallery-2.jpg" aria-label="Mở ảnh 2">
+            <img src="./assets/gallery-2.jpg" alt="Ảnh cưới 2" loading="lazy">
+          </button>
+          <button class="g-item reveal" data-delay="120" data-src="./assets/gallery-3.jpg" aria-label="Mở ảnh 3">
+            <img src="./assets/gallery-3.jpg" alt="Ảnh cưới 3" loading="lazy">
+          </button>
+          <button class="g-item reveal" data-delay="180" data-src="./assets/gallery-4.jpg" aria-label="Mở ảnh 4">
+            <img src="./assets/gallery-4.jpg" alt="Ảnh cưới 4" loading="lazy">
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section id="rsvp" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="h2">Xác nhận tham dự (RSVP)</h2>
+          <p class="lead">Điền nhanh để chúng mình chuẩn bị chu đáo hơn.</p>
+        </div>
+
+        <div class="rsvp-grid">
+          <form class="form reveal" id="rsvpForm">
+            <label>
+              Họ tên
+              <input name="name" placeholder="Ví dụ: Nguyễn Văn A" required />
+            </label>
+
+            <label>
+              Số điện thoại (tuỳ chọn)
+              <input name="phone" placeholder="090x..." />
+            </label>
+
+            <label>
+              Bạn sẽ tham dự?
+              <select name="attendance" required>
+                <option value="yes">Có, mình sẽ đến</option>
+                <option value="maybe">Chưa chắc</option>
+                <option value="no">Xin phép không tham dự</option>
+              </select>
+            </label>
+
+            <label>
+              Số người đi cùng
+              <input name="guests" type="number" min="0" max="10" value="0" />
+            </label>
+
+            <label>
+              Lời nhắn (tuỳ chọn)
+              <textarea name="message" rows="4" placeholder="Gửi lời chúc..."></textarea>
+            </label>
+
+            <button class="btn primary" type="submit">Gửi xác nhận</button>
+            <p class="muted small">* Dữ liệu demo được lưu trong trình duyệt (localStorage).</p>
+          </form>
+
+          <div class="panel reveal" data-delay="120">
+            <h3>Gợi ý</h3>
+            <ul class="bullets">
+              <li>Nhấn nút <b>♪</b> trên góc để bật nhạc nền.</li>
+              <li>Tuỳ chỉnh tên cô dâu/chú rể, ngày cưới trong <code>app.js</code>.</li>
+              <li>Deploy lên Vercel để chia sẻ link cho bạn bè.</li>
+            </ul>
+
+            <div class="panel-line"></div>
+
+            <h3>Lời cảm ơn</h3>
+            <p class="muted">
+              Sự hiện diện của bạn là món quà quý giá nhất. Hẹn gặp bạn trong ngày vui!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> Minh & Linh</div>
+        <div class="muted">Made with love ✦</div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lb-close" id="lbClose" aria-label="Đóng">×</button>
+    <img id="lbImg" alt="Ảnh phóng to" />
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
