@@ -262,3 +262,49 @@ const $$ = (s, p = document) => [...p.querySelectorAll(s)];
     heroImg.style.transform = "scale(1)";
   });
 })();
+
+
+
+// ---------- QR: open in existing lightbox + copy account ----------
+(function initQR() {
+  // 1) Open QR image in the same lightbox used by gallery
+  const lightbox = document.getElementById("lightbox");
+  const lbImg = document.getElementById("lbImg");
+  if (lightbox && lbImg) {
+    document.querySelectorAll("[data-lb]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const src = btn.getAttribute("data-lb");
+        if (!src) return;
+        lbImg.src = src;
+        lightbox.classList.add("show");
+        lightbox.setAttribute("aria-hidden", "false");
+      });
+    });
+  }
+
+  // 2) Copy to clipboard
+  document.querySelectorAll("[data-copy]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const sel = btn.getAttribute("data-copy");
+      const el = sel ? document.querySelector(sel) : null;
+      const text = el?.textContent?.trim();
+      if (!text) return;
+
+      try {
+        await navigator.clipboard.writeText(text);
+        btn.textContent = "Đã copy ✓";
+        setTimeout(() => (btn.textContent = "Copy số TK"), 1200);
+      } catch (e) {
+        // fallback
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+        btn.textContent = "Đã copy ✓";
+        setTimeout(() => (btn.textContent = "Copy số TK"), 1200);
+      }
+    });
+  });
+})();
